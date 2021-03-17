@@ -1,0 +1,13 @@
+syntax = "proto3";
+option java_package = "org.adaptive.grpc";
+
+service grpcService{
+  rpc grpcInvoke(JsonRequest) returns (JsonResponse){};
+}
+
+message JsonRequest{
+  string JsonString = 1;
+}
+message JsonResponse{
+  string JsonString = 1;
+}
